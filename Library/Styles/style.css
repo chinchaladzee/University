@@ -117,7 +117,7 @@
    margin-top: 50px;
    padding-bottom: 50px;
    display: flex;
-   width: 1000px;
+   width: 100%;
 }
 .categoryList {
    display: flex;
@@ -152,7 +152,6 @@
    display: flex;
    align-items: center;
    width: 700px;
-   height: 120px;
    column-gap: 20px;
 }
 .postDate {
@@ -160,8 +159,7 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   width: 65px;
-   height: 65px;
+   padding: 10px;
    background: rgb(255, 94, 0);
    border-radius: 10px;
    color: #fff;
@@ -193,6 +191,7 @@
 }
 @media (max-width: 1090px) {
    .mainContainer {
+      justify-content: center;
       flex-direction: column;
       align-items: center;
       row-gap: 50px;
@@ -216,10 +215,20 @@
       border: 0px;
       border-bottom: 3px solid rgb(123, 0, 255);
    }
+   .mainContent {
+      margin: 0px;
+   }
+   .postBox {
+      width: 90%;
+      margin: auto;
+   }
 }
-@media (max-width: 740px) {
+@media (max-width: 750px) {
    .navigationLogo {
       width: 200px;
+   }
+   .categoryList {
+      grid-template-columns: repeat(1, 230px);
    }
 }
 @media (max-width: 540px) {
@@ -238,5 +247,11 @@
       flex-direction: column;
       justify-content: center;
       row-gap: 50px;
+   }
+   .categoryList {
+      grid-template-columns: repeat(1, 200px);
+   }
+   .postTitle {
+      font-size: 13px;
    }
 }
